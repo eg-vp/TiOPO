@@ -22,5 +22,21 @@ public class StringLibrary {
             add += c;
         return add + str;
     }
+
+    public static String swapCase(String str)
+    {
+        char[] chars = str.toCharArray();
+        for(int i = 0;i<chars.length;i++) {
+            if (!Character.isDigit(chars[i])) {
+                if (Character.isUpperCase(chars[i])) {
+                    chars[i] = Character.toLowerCase(chars[i]);
+                } else {
+                    chars[i] = Character.toUpperCase(chars[i]);
+                }
+            }
+        }
+        return new String(chars);
+    }
+
 }
 
