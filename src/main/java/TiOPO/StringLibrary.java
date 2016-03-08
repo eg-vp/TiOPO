@@ -66,5 +66,18 @@ public class StringLibrary {
             strings[j] = substring(str, i, strLength - i);
         return strings;
     }
+
+    public static char[] chars(String str) {
+        int strLength = str.length();
+        if (strLength == 0) {
+            return new char[0];
+        }
+        char[] chars = new char[strLength];
+        for (int i = 0;i< strLength;i++)
+        {
+            chars[i] = str.charAt(i);
+        }
+        return chars;
+    }
 }
 
