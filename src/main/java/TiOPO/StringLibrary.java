@@ -96,5 +96,10 @@ public class StringLibrary {
         }
         return new String(strChars);
     }
+
+    public static String join(String separator, String str1, String str2)
+    {
+        return str1 + separator + str2;
+    }
 }
 
