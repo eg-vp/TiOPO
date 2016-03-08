@@ -46,5 +46,25 @@ public class StringLibrary {
         }
         return resultStr;
     }
+
+    public static String[] chop(String str, int length) {
+        int strLength = str.length();
+        if (strLength == 0)
+            return new String[0];
+        if (length == strLength || length <= 0) {
+            return new String[]{str};
+        }
+        String[] strings = new String[(strLength + (length - 1)) / length];
+        int j = 0;
+        int i = 0;
+        while (i + length <= strLength) {
+            strings[j] = substring(str, i, length);
+            i += length;
+            j++;
+        }
+        if (strLength - i != 0 && strLength - i < length)
+            strings[j] = substring(str, i, strLength - i);
+        return strings;
+    }
 }
 
