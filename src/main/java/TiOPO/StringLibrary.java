@@ -23,10 +23,9 @@ public class StringLibrary {
         return add + str;
     }
 
-    public static String swapCase(String str)
-    {
+    public static String swapCase(String str) {
         char[] chars = str.toCharArray();
-        for(int i = 0;i<chars.length;i++) {
+        for (int i = 0; i < chars.length; i++) {
             if (!Character.isDigit(chars[i])) {
                 if (Character.isUpperCase(chars[i])) {
                     chars[i] = Character.toLowerCase(chars[i]);
@@ -38,5 +37,14 @@ public class StringLibrary {
         return new String(chars);
     }
 
+    public static String substring(String str, int sPos, int len) throws StringIndexOutOfBoundsException {
+        String resultStr = "";
+        if (sPos < 0 || len < 0 || len > str.length() || sPos + len > str.length())
+            throw new StringIndexOutOfBoundsException();
+        for (int i = sPos; i < sPos + len; i++) {
+            resultStr += str.charAt(i);
+        }
+        return resultStr;
+    }
 }
 
