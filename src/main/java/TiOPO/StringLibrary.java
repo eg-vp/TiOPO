@@ -79,5 +79,22 @@ public class StringLibrary {
         }
         return chars;
     }
+
+    public static String reverse(String str)
+    {
+        int strLength = str.length();
+        if (strLength == 0)
+            return "";
+        int j = strLength-1;
+        char tmp;
+        char[] strChars = str.toCharArray();
+        for (int i = 0;i<strLength/2; i++) {
+            tmp = strChars[i];
+            strChars[i] = strChars[j];
+            strChars[j] = tmp;
+            j--;
+        }
+        return new String(strChars);
+    }
 }
 
