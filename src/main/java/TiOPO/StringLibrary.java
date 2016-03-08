@@ -12,4 +12,15 @@ public class StringLibrary {
             str += c;
         return str;
     }
+
+    public static String padLeft(String str, char c, int length) {
+        int addLength = length - str.length();
+        if (addLength <= 0)
+            return str;
+        String add = "";
+        for (int i = 0; i < addLength; i++)
+            add += c;
+        return add + str;
+    }
 }
+
