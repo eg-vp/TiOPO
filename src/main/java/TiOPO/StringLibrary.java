@@ -26,7 +26,7 @@ public class StringLibrary {
     public static String swapCase(String str) {
         char[] chars = str.toCharArray();
         for (int i = 0; i < chars.length; i++) {
-            if (!Character.isDigit(chars[i])) {
+            if (!Character.isDigit(chars[i]) && Character.isLetter(chars[i])) {
                 if (Character.isUpperCase(chars[i])) {
                     chars[i] = Character.toLowerCase(chars[i]);
                 } else {

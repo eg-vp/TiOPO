@@ -37,4 +37,14 @@ public class SwapCaseTest extends TestCase {
         String s = swapCase("zxcvb");
         assertTrue("Error, strings not equals", s.equals("ZXCVB"));
     }
+
+    public void testSwapCase7() throws Exception {
+        String s = swapCase("abc!!DE11");
+        assertTrue("Error, strings not equals", s.equals("ABC!!de11"));
+    }
+
+    public void testSwapCase8() throws Exception {
+        String s = swapCase("abc!,D,11");
+        assertTrue("Error, strings not equals", s.equals("ABC!,d,11"));
+    }
 }
